@@ -1,25 +1,69 @@
-import logo from './logo.svg';
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
+import Home from './Pages/Home/Home';
+import Header from './component/Header/Header';
+import Footer from './component/Footer/Footer';
+import About from './Pages/About/About';
+import Blog from './Pages/Blog/Blog';
+import Contact from './Pages/Contact/Contact';
+import Login from './Pages/Login/Login';
+import Shop from './Pages/Shop/Shop';
+import Signup from './Pages/Signup/Signup';
+import Cart from './Pages/cart/Cart';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const Layout = ()=>{
+    return(
+      <div className='main'>
+      <Header/>
+      <div className='content'>
+        <Outlet/>
+      </div>
+      <Footer/>
     </div>
-  );
+    )
+  }
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: < Layout />,
+      children:[
+        {
+          path:'/',
+          element: < Home />
+        },
+        {
+          path: '/about',
+          element: < About /> 
+        },
+        {
+          path: '/blog',
+          element: < Blog /> 
+        },
+        {
+          path: '/contact',
+          element: < Contact /> 
+        },
+        {
+          path: '/login',
+          element: < Login /> 
+        },
+        {
+          path: '/shop',
+          element: < Shop /> 
+        },
+        {
+          path: '/signup',
+          element: < Signup /> 
+        },
+        {
+          path: '/cart',
+          element: < Cart />
+        }
+      ]
+    }
+  ])
+  return < RouterProvider router={router}/>;
 }
 
 export default App;

@@ -1,0 +1,139 @@
+/* the slider styling */
+.carousel{
+     height: 100%;
+     width: 100% !important;
+     /* margin: 0 auto !important; */
+     background-color: #f6f6f6 !important;
+     overflow: hidden;
+
+}
+.inner{
+     display: flex !important;
+     
+}
+
+/* the prev and next buttons */
+.carousel-control-next, .carousel-control-prev{
+     height: 40px;
+     width: 40px !important;
+     border-radius: 50%;
+     background: black !important;
+     top: 50% !important;
+     opacity: 0 !important;
+     transition: all 0.3s !important;
+}
+.carousel-control-prev{
+     left: -200px !important;
+}
+.carousel-control-next{
+     right: -200px !important;
+     
+}
+.carousel:hover .carousel-control-next{
+     right: 0px !important;
+     opacity: 1 !important;
+}
+.carousel:hover .carousel-control-prev{
+     left: 0px !important;
+     opacity: 1 !important;
+}
+
+/* left side of hero section which includes the intro texts and the link button */
+.inner .left {
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     flex: 1;
+     transform: translateY(50%);
+     padding: 30px;
+}
+
+.inner .left span{
+     color: red;
+     line-height: 1.5;
+     transform: translateY(50px);
+     opacity: 0;
+     transition: opacity 0.3s, transform 0.3s linear;
+}
+.inner .left h2{
+     margin-top: 20px;
+     font-size: 60px;
+     margin-bottom: 25px;
+     transform: translateY(50px);
+     opacity: 0;
+     transition: opacity 0.3s, transform 0.5s, 0.5s linear;
+}
+.inner .left h2.last{
+     font-size: 40px;
+}
+.inner .left h3{
+     margin-bottom: 30px;
+     transform: translateY(50px);
+     opacity: 0;
+     transition: opacity 0.2s, transform 0.5s, 0.8s linear;
+}
+.inner .left button{
+     width: 160px;
+     height: 30px;
+     border: none;
+     color: black;
+     cursor: pointer;
+     font-weight: 600;
+     border-bottom: 2px solid black;
+     transform: translateY(50px);
+     letter-spacing: 1.2px;
+     opacity: 0;
+     transition: opacity 0.1s, transform 0.5s, 1s linear;
+     background-color: transparent;
+}
+.carousel-item.active .inner .left.observed span{
+opacity: 1;
+transform: translateY(0);
+
+}
+.carousel-item.active .inner .left.observed h2{
+     opacity: 1;
+     transform: translateY(0);
+}
+.carousel-item.active .inner .left.observed h3{
+     opacity: 1;
+     transform: translateY(0);
+}
+.carousel-item.active .inner .left.observed button{
+     opacity: 1;
+     transform: translateY(0);
+}
+.inner .left button:hover{
+     color: red ;
+     border-bottom: 2px solid red;
+}
+.inner .right{
+     flex: 1;
+     
+     position: relative;
+     height: 100vh;
+}
+.inner .right .circle{
+     width: 420px;
+     height: 420px;
+     border-radius: 50%;
+     background-color: #e2dbd8;
+     position: absolute;
+     text-align: center;
+     top: 10px;
+     left: 10%;
+     opacity: 1;
+     animation: circlemove 1s linear;
+
+}
+
+.inner .right img{
+     position: absolute;
+     z-index: 1;
+     top: 25px;
+     left: 20px;
+}
+@keyframes circlemove {
+     0%   { opacity: 0; scale: 0.3;}
+     100% { opacity: 1; scale: 1;}
+}
