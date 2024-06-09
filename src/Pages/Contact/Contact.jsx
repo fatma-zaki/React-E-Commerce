@@ -1,8 +1,12 @@
+import PagesTitle from '../../component/pagesTitle/PagesTitle';
 import './contact.css'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+    < PagesTitle title='contact'/>
+      
+    </div>
   )
 }
 

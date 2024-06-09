@@ -1,10 +1,20 @@
-import React from 'react'
+import './filterBtns.css'
+import useFetchAxios from '../../fetchAxios/useFetchAxios';
 
-const FilterBtns = () => {
+
+const FilterBtns = ({filterProducts, state}) => {
+
+  const [categories] = useFetchAxios('https://fakestoreapi.com/products/categories')
   return (
-    <>
-    <button></button>
-    </>
+    <div className="filter">
+       <button onClick={()=> filterProducts('all')} >all</button>
+      {
+        categories.map((categ)=>(
+          <button key={categ} onClick={()=> filterProducts(categ)}>{categ}</button>
+        ))
+      }
+    </div>
+  
   )
 }
 

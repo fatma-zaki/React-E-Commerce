@@ -1,8 +1,12 @@
+import PagesTitle from '../../component/pagesTitle/PagesTitle'
 import './signup.css'
 
 const Signup = () => {
   return (
-    <div>Signup</div>
+    <div>
+    < PagesTitle title='signup'/>
+
+    </div>
   )
 }
 

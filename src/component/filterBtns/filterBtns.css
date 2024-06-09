@@ -1,0 +1,15 @@
+.filter{
+    margin: 40px 0; 
+
+}
+.filter button{
+     border: none;
+     background-color: transparent;
+     margin-left: 20px;
+     text-transform: capitalize;
+     font-weight: 600;
+     opacity: 0.5;
+}
+.filter button:hover{
+     opacity: 0.8;
+}

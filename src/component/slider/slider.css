@@ -4,7 +4,7 @@
      width: 100% !important;
      /* margin: 0 auto !important; */
      background-color: #f6f6f6 !important;
-     overflow: hidden;
+     /* overflow: hidden; */
 
 }
 .inner{
@@ -45,7 +45,7 @@
      height: 100%;
      flex: 1;
      transform: translateY(50%);
-     padding: 30px;
+     padding: 20px;
 }
 
 .inner .left span{
@@ -109,7 +109,6 @@ transform: translateY(0);
 }
 .inner .right{
      flex: 1;
-     
      position: relative;
      height: 100vh;
 }
@@ -137,3 +136,31 @@ transform: translateY(0);
      0%   { opacity: 0; scale: 0.3;}
      100% { opacity: 1; scale: 1;}
 }
+
+/* ######responseve */
+@media only screen and (max-width: 768px) {
+     /* For mobile phones: */
+  .inner{
+     flex-direction: column;
+     min-height: 100vh;
+     margin-bottom: 200px;
+     /* gap: 30; */
+  }    
+  .inner .left {
+     /* height: 50%; */
+     flex: 1;
+     transform: translateY(10%);
+     padding: 30px;
+} 
+.inner .right{
+     flex: 1;
+     position: relative;
+     height: 50%;
+}
+.inner .right img{
+     position: absolute;
+     z-index: 1;
+     top: 0px;
+     left: 10px;
+}
+     }

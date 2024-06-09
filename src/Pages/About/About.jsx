@@ -1,8 +1,14 @@
+import OurStory from '../../component/ourStory/OurStory'
+import PagesTitle from '../../component/pagesTitle/PagesTitle'
 import './about.css'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+    < PagesTitle title='about'/>
+    < OurStory />
+
+    </div>
   )
 }
 

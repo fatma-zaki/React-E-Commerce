@@ -1,0 +1,16 @@
+.ourStory{
+     text-align: center;
+     margin: 100px 0;
+}
+.ourStory .ourStoryHeader{
+     margin-bottom: 50px;
+     font-size: 45px;
+}
+.ourStory p{
+     font-size: 17px;
+     line-height: 2;
+     margin-bottom: 30px;
+}
+.ourStory .secondP{
+     opacity: 0.7;
+}
