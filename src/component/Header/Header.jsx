@@ -56,8 +56,8 @@ const Header = () => {
           </Form>
         </Navbar.Collapse>
         <Link to="/login">
-          {" "}
-          <AiOutlineUser />{" "}
+          
+          <AiOutlineUser />
         </Link>
         <Link to="/cart">
           <AiOutlineShoppingCart />
