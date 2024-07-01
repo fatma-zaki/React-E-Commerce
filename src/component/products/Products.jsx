@@ -41,7 +41,7 @@ const Products = () => {
          ):state.map((item) =>
           (
             <Col key={item.id} xs={12} md={6} lg={4}>
-              < ProductCard  title={item.title} img = {item.image} price={item.price}/>
+              < ProductCard id={item.id} title={item.title} img = {item.image} price={item.price}/>
             </Col>
           )
          )

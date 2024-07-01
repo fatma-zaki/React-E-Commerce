@@ -1,0 +1,29 @@
+.footer{
+     height: fit-content;
+     background-color: #f4f4f4;
+     line-height: 2;
+}
+.footer a{
+     text-decoration: none;
+}
+.footer .container{
+     padding-top: 80px;
+     padding-bottom: 80px;
+}
+
+.footer a h2{
+     font-weight: bold;
+     font-size: 25px;
+     letter-spacing: 2px;
+     color: black;
+     text-transform: capitalize;
+}
+.footer p{
+     opacity: 0.8;
+     font-size: 16px;
+     /* line-height: 2; */
+}
+.footer .linkP{
+     color: black;
+     opacity: 0.8;
+}

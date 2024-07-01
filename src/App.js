@@ -10,6 +10,7 @@ import Login from './Pages/Login/Login';
 import Shop from './Pages/Shop/Shop';
 import Signup from './Pages/Signup/Signup';
 import Cart from './Pages/cart/Cart';
+import Product from './Pages/product/Product';
 
 function App() {
   const Layout = ()=>{
@@ -59,6 +60,10 @@ function App() {
         {
           path: '/cart',
           element: < Cart />
+        },
+        {
+          path: '/products/:id',
+          element: < Product />
         }
       ]
     }

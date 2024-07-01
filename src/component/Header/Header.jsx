@@ -6,9 +6,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { AiOutlineUser , AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 // import Cart from '../../Pages/cart/Cart';
 // import { Link } from 'react-router-dom';
 const Header = () => {
+const cart = useSelector(state => state.cart)
+
+const count = cart.reduce((acc, product) => 
+  acc += product.quantity
+,0)
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary ">
@@ -59,8 +65,11 @@ const Header = () => {
           
           <AiOutlineUser />
         </Link>
-        <Link to="/cart">
+        <Link to="/cart" className='cartIcon'> 
           <AiOutlineShoppingCart />
+          <span className='count'> 
+          {count}
+             </span>
         </Link>
       </Container>
     </Navbar>

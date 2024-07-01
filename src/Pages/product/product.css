@@ -1,0 +1,73 @@
+.colparent{
+     margin-top: 50px !important;
+     margin-bottom: 50px !important;
+}
+.category{
+     text-transform: capitalize;
+     font-size: 18px;
+     color: #666;
+
+}
+.title{
+     /* border-bottom: 1px solid black; */
+     font-size: 25px;
+     font-weight: bold;
+}
+.price{
+     background-color: #62aa32;
+     width: 130px;
+     color: white;
+     padding: 5px 10px;
+     border-radius: 5px;
+     /* font-size: 1px; */
+     text-transform: capitalize;
+}
+.rating{
+     text-transform: capitalize;
+     font-weight: bold;
+     line-height: 2;
+}
+.rating svg{
+     color: #62aa32;
+}
+.desc{
+     color: #666;
+     text-transform: capitalize;
+     font-size: 17px;
+     line-height: 2;
+}
+
+.headQuan{
+     margin-bottom: 10px;
+}
+.colQuan input{
+     width: 80px;
+     padding: 10px;
+     font-size: 17px;
+     border: 1px solid #ddd;
+}
+.colQuan span{
+     display: inline-block;
+     padding: 10px;
+     text-align: center;
+     width: 80px;
+     background-color: #EBEBEB;
+}
+button.add{
+     width: 80%;
+     font-size: 18px;
+     text-transform: capitalize;
+     background-color: white;
+     color: black;
+     border: 1px solid black;
+}
+button.add svg{
+     color: black;
+     margin-right: 10px;
+}
+button.add:hover{
+     background-color: black;
+}
+button.add:hover svg{
+     color: white;
+}

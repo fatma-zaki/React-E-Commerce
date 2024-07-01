@@ -1,0 +1,8 @@
+.cart{
+     /* width: 500px; */
+     background-color: white;
+}
+
+.productInfo{
+     display: flex !important;
+}

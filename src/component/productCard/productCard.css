@@ -18,6 +18,11 @@
     /* flex:1; */
      /* height: 200px !important; */
 }
+.card .btn a{
+     text-decoration: none;
+     color: black;
+
+}
 .card .btn{
      background-color: #e7e6e6;
      color: black;
@@ -31,6 +36,9 @@
 
 .card .btn:hover{
      background-color: black !important;
+     color: white;
+}
+.card .btn:hover a{
      color: white;
 }
 .card:hover .btn{

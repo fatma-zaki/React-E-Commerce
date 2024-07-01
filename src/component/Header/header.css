@@ -61,3 +61,20 @@ nav a{
      font-size: 23px;
      margin: auto 10px;
 }
+a .cartIcon{
+     width: fit-content !important;
+}
+nav a .count{
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     text-align: center;
+     margin-left: -5px;
+     margin-top: 10px;
+     padding: 2px;
+     font-size: 11px;
+     border-radius: 50%;
+     background-color: #333;
+     color: white;
+     opacity: 0.8;
+}
