@@ -6,15 +6,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { AiOutlineUser , AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-// import Cart from '../../Pages/cart/Cart';
+import {  useSelector, useDispatch } from 'react-redux';
+import { openCart } from '../../rtk/slices/cartslice';
+
 // import { Link } from 'react-router-dom';
 const Header = () => {
-const cart = useSelector(state => state.cart)
+const cart = useSelector(state => state.cart.items)
+// const toggle = useSelector(state=> state.toggle)
+const dispatch = useDispatch()
 
-const count = cart.reduce((acc, product) => 
-  acc += product.quantity
-,0)
+const count =cart.reduce((acc, product) => acc += product.quantity, 0)
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary ">
@@ -22,6 +23,7 @@ const count = cart.reduce((acc, product) =>
         <Navbar.Brand className="me-auto" as={Link} to="/">
           fashion
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
@@ -61,16 +63,21 @@ const count = cart.reduce((acc, product) =>
             </Button>
           </Form>
         </Navbar.Collapse>
+        <div className="reverse">
+
         <Link to="/login">
-          
           <AiOutlineUser />
         </Link>
-        <Link to="/cart" className='cartIcon'> 
-          <AiOutlineShoppingCart />
+        {/* <Link  className='cartIcon'  >  */}
+        <button className='cartIcon' onClick={()=> dispatch(openCart())}>
+          
+          <AiOutlineShoppingCart  />
           <span className='count'> 
           {count}
              </span>
-        </Link>
+        </button>
+        </div>
+        {/* </Link> */}
       </Container>
     </Navbar>
   );

@@ -6,3 +6,6 @@
 .productInfo{
      display: flex !important;
 }
+.offcanvas-body{
+     z-index: 777777777 !important;
+}

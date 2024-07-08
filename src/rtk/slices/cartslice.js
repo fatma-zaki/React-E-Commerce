@@ -1,33 +1,52 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-const initialState = []
+const initialState ={
+  items: [],
+  toggle: false
+}
 
+
+  
 
 export const cartSlice = createSlice({
   initialState,
   name: "cartSlice",
+
   reducers: {
     addToCart : (state, action) => {
-     const findProduct = state.find(product => product.id === action.payload.id);
+     const findProduct = state.items.find(product => product.id === action.payload.id);
      if(findProduct){
           findProduct.quantity += 1;
      }else{
           const productClone = {...action.payload, quantity:1}
-          state.push(productClone)
+          state.items.push(productClone)
      }
     },
     deleteOneFromCart: (state, action) => {
-     return state.filter(product => product.id !== action.payload.id)
+     return state.items.filter(product => product.id !== action.payload.id)
     },
-    clearCart: () => {
-     return []
+    clearCart: (state) => {
+     return state.items= []
     },
     increaseQuanCart: (state, action) => {
-     const productAdd = state.find(product => product.id === action.payload.id);
-     productAdd.quantity += 1
+     const productAdd = state.items.find(product => product.id === action.payload.id);
+     productAdd.quantity++
 },
-//     decreaseQuanCart: (state, action) => {},
+    decreaseQuanCart: (state, action) => {
+      const productdecrease = state.items.find(product => product.id === action.payload.id);
+     productdecrease.quantity--
+     if(productdecrease.quantity === 0){
+     return state.items.filter(product => product.id !== action.payload.id)
+     }
+    },
+    openCart : (state)=>{
+      state.toggle =true
+    },
+    closeCart : (state)=>{
+      state.toggle= false
+    }
+
   },
 });
 
@@ -36,6 +55,8 @@ export const {
   deleteOneFromCart,
   clearCart,
   increaseQuanCart,
-//   decreaseQuanCart,
+  decreaseQuanCart,
+  closeCart,
+  openCart
 } = cartSlice.actions;
 export default cartSlice.reducer;

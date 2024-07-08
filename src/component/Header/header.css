@@ -2,11 +2,11 @@ nav.navbar.bg-body-tertiary{
      text-transform: capitalize;
      /* background-color: transparent !important; */
      height: 100px;
-     z-index: 3333333;
+     z-index: 333;
 }
 nav .collapse.show{
      background-color: #f8f9fa!important;
-     z-index: 3333;
+     z-index: 333;
 }
 nav .container{
      display: flex !important;
@@ -51,20 +51,23 @@ nav form button{
 
 }
 nav form button svg{
-     font-size: 20px;
+     font-size: 23px;
      color: #9c9b9b ;
      
 }
-nav a{
+nav .catIcon ,
+ nav a{
      text-decoration: none ;
-     color: #666666 ;
+     color: #9c9b9b !important ;
      font-size: 23px;
      margin: auto 10px;
 }
-a .cartIcon{
+button.cartIcon{
      width: fit-content !important;
+     border: none;
+     background-color: transparent ;
 }
-nav a .count{
+nav .cartIcon .count{
      display: inline-block;
      width: 20px;
      height: 20px;

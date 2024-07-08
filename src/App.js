@@ -11,12 +11,19 @@ import Shop from './Pages/Shop/Shop';
 import Signup from './Pages/Signup/Signup';
 import Cart from './Pages/cart/Cart';
 import Product from './Pages/product/Product';
-
+import {useSelector} from 'react-redux'
 function App() {
+  const isOpen = useSelector((state) => state.cart.toggle);
+
+//the main layout of the app
   const Layout = ()=>{
     return(
       <div className='main'>
-      <Header/>
+      <Header />
+      {isOpen &&
+      <Cart/>
+      }
+      
       <div className='content'>
         <Outlet/>
       </div>
@@ -24,6 +31,8 @@ function App() {
     </div>
     )
   }
+
+  //routing 
   const router = createBrowserRouter([
     {
       path: '/',
