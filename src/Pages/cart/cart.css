@@ -9,3 +9,6 @@
 .offcanvas-body{
      z-index: 777777777 !important;
 }
+.cart .cartFoot{
+     bottom: 0;
+}

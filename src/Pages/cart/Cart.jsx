@@ -1,6 +1,5 @@
 import "./cart.css";
 import {
-  Col,
   Offcanvas,
   OffcanvasHeader,
   OffcanvasTitle,
@@ -8,11 +7,10 @@ import {
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  // clearCart,
-  deleteOneFromCart,
-  increaseQuanCart,
+  // clearCart
   closeCart
 } from "../../rtk/slices/cartslice";
+import CartItem from "../../component/cartItem/CartItem";
 // import CartItem from "../../component/cartItem/CartItem";
 
 const Cart = () => {
@@ -30,73 +28,39 @@ const Cart = () => {
   return (
     <Offcanvas show={isOpen} placement="end" onHide={()=>dispatch(closeCart())}>
       <OffcanvasHeader closeButton>
-        <OffcanvasTitle>your cart</OffcanvasTitle>
+        <OffcanvasTitle> your cart </OffcanvasTitle>
       </OffcanvasHeader>
+        <hr/>
+
+      {
+        cart.length === 0 ?
+      <p>no items found</p> :
       <Offcanvas.Body>
         {cart.map((product) => (
           <Row key={product.id}>
-            <Col className="productInfo">
-              <div className="img">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  style={{ width: "100px", height: "100px" }}
-                />
-              </div>
-              <div className="details">
-                <h5 className="title">{product.title.substr(0, 12)}</h5>
-                <p className="price">$ {product.price} usd</p>
-                <button onClick={() => dispatch(increaseQuanCart(product))}>
-                  increase
-                </button>
-                <button onClick={() => dispatch(deleteOneFromCart(product))}>
-                  remove
-                </button>
-              </div>
-            </Col>
-            <Col>
-              <input type="number" name="" id="" value={product.quantity} />
-            </Col>
+            <CartItem product={product}/>
           </Row>
         ))}
-        {/* <CartItem /> */}
-        {subtotal}
-      </Offcanvas.Body>
+        <div className="cartFoot">
+        <hr />
+        
+          
+          
+        <div className="subtotal">
+          <h5>
+            subtotal:
+          </h5>
+        <p>
+          
+        $ {subtotal} usd
+        </p>
+        </div>
+        <button>continue to checkout </button>
+        
+        </div>
+      </Offcanvas.Body> 
+      }
     </Offcanvas>
-    //   <div className='cart'>
-    //     <Row>
-    //       <Col><h2>your cart</h2></Col>
-    //       <Col><IoCloseSharp/></Col>
-    //     </Row>
-    //     <hr />
-    //     <p>total: {subtotal}</p>
-    //     {
-    //       cart.map((product) => (
-
-    //     <Row key={product.id}>
-    //       <Col className='productInfo'>
-    //       <div className="img"><img src={product.image} alt={product.title} style={{width:'100px', height:'100px'}} /></div>
-    //       <div className="details">
-    //         <h5 className="title">{product.title.substr(0,12)}</h5>
-    //         <p className="price">$ {product.price} usd</p>
-    //         <button onClick={()=> dispatch(increaseQuanCart(product))}>increase</button>
-    //         <button onClick={()=> dispatch(deleteOneFromCart(product))}>remove</button>
-    //       </div>
-    //       </Col>
-    //       <Col>
-    //       <input type="number" name="" id="" value={product.quantity}/>
-    //       </Col>
-    //     </Row>
-
-    //     ))
-    //   }
-    //   {/* <Row>
-    //   <button onClick={()=> dispatch(clearCart())}></button>
-    //   </Row>
-    //   <Row>
-    //   <button>continue to checkout</button>
-    //   </Row> */}
-    // </div>
   );
 };
 
