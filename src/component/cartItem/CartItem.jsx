@@ -12,20 +12,19 @@ const CartItem = ({product}) => {
                 <img
                   src={product.image}
                   alt={product.title}
-                  style={{ width: "100px", height: "100px" }}
                 />
               </div>
               <div className="details">
                 <h5 className="title">{product.title.substr(0, 12)}</h5>
-                <p className="price">$ {product.price} usd</p>
-                <button onClick={() => dispatch(increaseQuanCart(product))}>
-                  increase
-                </button>
-                <button onClick={() => dispatch(deleteOneFromCart(product))}>
+                <p className="priceCart">$ {product.price} usd</p>
+                {/* <button onClick={() => dispatch(increaseQuanCart(product))}> */}
+                  {/* increase */}
+                {/* </button> */}
+                <button className='removeFromCart' onClick={() => dispatch(deleteOneFromCart(product))}>
                   remove
                 </button>
               </div>
-              <input type="number" name="" id="" value={product.quantity} />
+              <input className='cartInput' type="number" min='1' max='20'  name="" id="" value={product.quantity} />
 
     </Stack>
   )

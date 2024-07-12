@@ -9,6 +9,31 @@
 .offcanvas-body{
      z-index: 777777777 !important;
 }
-.cart .cartFoot{
-     bottom: 0;
+.cartFoot{
+     width: 100%;
+     position: absolute;
+     bottom: 20px;
+}
+.cartFoot .subtotal{
+     margin-right: 20px;
+display: flex;
+justify-content: space-between;
+}
+.noItems{
+     margin: auto;
+     color: #666;
+     font-weight: 500;
+}
+button.checkout{
+     width: 80%;
+     font-size: 18px;
+     text-transform: capitalize;
+     background-color: white;
+     color: black;
+     border: 1px solid black;
+}
+
+button.checkout:hover{
+     background-color: black;
+     color: #fff;
 }

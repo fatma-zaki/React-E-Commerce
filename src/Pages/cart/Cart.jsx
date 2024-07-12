@@ -34,7 +34,7 @@ const Cart = () => {
 
       {
         cart.length === 0 ?
-      <p>no items found</p> :
+      <p className="noItems">No items found</p> :
       <Offcanvas.Body>
         {cart.map((product) => (
           <Row key={product.id}>
@@ -55,7 +55,7 @@ const Cart = () => {
         $ {subtotal} usd
         </p>
         </div>
-        <button>continue to checkout </button>
+        <button className="checkout">continue to checkout </button>
         
         </div>
       </Offcanvas.Body> 

@@ -78,7 +78,7 @@ const Product = () => {
                     name="quantity"
                     min="1"
                     max="20"
-                    // value="1"
+                    value="1"
                   />
                 </Col>
                 <Col className="colQuan">
