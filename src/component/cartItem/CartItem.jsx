@@ -24,7 +24,7 @@ const CartItem = ({product}) => {
                   remove
                 </button>
               </div>
-              <input className='cartInput' type="number" min='1' max='20'  name="" id="" value={product.quantity} />
+              <input className='cartInput' type="number" min='1' max='20'  name="" id="" defaultValue={product.quantity} />
 
     </Stack>
   )

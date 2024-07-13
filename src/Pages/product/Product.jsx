@@ -6,8 +6,9 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
 // import { FaStarHalfAlt } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../rtk/slices/cartslice";
+import { useState } from "react";
 
 const Product = () => {
 
@@ -17,6 +18,9 @@ const Product = () => {
   const product = useFetchAxios(apiKey);
 
   // console.log(product);
+  const handleQuan= ()=>{
+    
+  }
 
   return (
     <>
@@ -78,7 +82,8 @@ const Product = () => {
                     name="quantity"
                     min="1"
                     max="20"
-                    value="1"
+                    step='1'
+                    defaultValue='1'
                   />
                 </Col>
                 <Col className="colQuan">
