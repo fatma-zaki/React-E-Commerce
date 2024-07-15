@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState ={
-  items: localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [],
+  items: [],
   toggle: false
 }
 
@@ -22,22 +22,19 @@ export const cartSlice = createSlice({
           const productClone = {...action.payload, quantity:1}
           state.items.push(productClone)
      }
-     localStorage.setItem('cartItems', JSON.stringify(state.items))
+    //  localStorage.setItem('cartItems', JSON.stringify(state.items))
     },
     deleteOneFromCart: (state, action) => {
       state.items.filter(product => product.id !== action.payload.id)
-      localStorage.setItem('cartItems', JSON.stringify(state.items))
     
     },
     clearCart: (state) => {
       state.items= []
-     localStorage.setItem('cartItems', JSON.stringify(state.items))
 
     },
     increaseQuanCart: (state, action) => {
      const productAdd = state.items.find(product => product.id === action.payload.id);
      productAdd.quantity++
-     localStorage.setItem('cartItems', JSON.stringify(state.items))
 
 },
     decreaseQuanCart: (state, action) => {
@@ -46,7 +43,6 @@ export const cartSlice = createSlice({
      if(productdecrease.quantity === 0){
      return state.items.filter(product => product.id !== action.payload.id)
      }
-     localStorage.setItem('cartItems', JSON.stringify(state.items))
 
     },
     openCart : (state)=>{

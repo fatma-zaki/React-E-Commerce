@@ -1,7 +1,8 @@
 import { Stack } from 'react-bootstrap'
 import './cartItem.css'
 import { useDispatch } from 'react-redux';
-import { deleteOneFromCart, increaseQuanCart } from '../../rtk/slices/cartslice';
+import { decreaseQuanCart, deleteOneFromCart, increaseQuanCart } from '../../rtk/slices/cartslice';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 const CartItem = ({product}) => {
   
@@ -24,7 +25,11 @@ const CartItem = ({product}) => {
                   remove
                 </button>
               </div>
-              <input className='cartInput' type="number" min='1' max='20'  name="" id="" defaultValue={product.quantity} />
+              <div className="btns">
+              <IoIosArrowUp onClick={() => dispatch(increaseQuanCart(product))} />
+              <div className="cartInput">{product.quantity}</div>
+              <IoIosArrowDown onClick={() => dispatch(decreaseQuanCart(product))}/>
+              </div>
 
     </Stack>
   )
