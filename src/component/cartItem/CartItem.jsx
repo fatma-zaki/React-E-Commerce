@@ -8,7 +8,9 @@ const CartItem = ({product}) => {
   
   const dispatch = useDispatch();
   return (
-    <Stack direction='horizontal' gap={2} className='d-flex align-items-center'>
+    <Stack direction='horizontal' gap={2} className='d-flex justify-content-between mb-3'>
+    <div className="left">
+
     <div className="img">
                 <img
                   src={product.image}
@@ -25,6 +27,8 @@ const CartItem = ({product}) => {
                   remove
                 </button>
               </div>
+    </div>
+
               <div className="btns">
               <IoIosArrowUp onClick={() => dispatch(increaseQuanCart(product))} />
               <div className="cartInput">{product.quantity}</div>

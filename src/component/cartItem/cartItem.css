@@ -1,6 +1,10 @@
+.left{
+     display: flex;
+}
 .img img{
      width: 70px;
 }
+
 .details{
      margin-left: 20px;
 }
@@ -18,8 +22,38 @@
      border-bottom: 1px solid black;
      background-color: transparent
 }
-input.cartInput{
-     position: absolute;
-     width: 60px;
-     right: 20px;
+.btns{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     text-align: center;  
+     background-color: transparent;
+     border-radius: 20px;
+     height: 90px;
+     color: #fff;
+     transition: all 0.8s;
+     cursor: pointer;
+     
+}
+.btns svg{
+     display: none;
+     font-size: 20px;
+     cursor: pointer;
+     transition: all 0.6s;
+
+}
+.cartInput{
+     width: 40px;
+     font-size: 20px;
+     padding: 8px 5px;
+     background-color: #5dcf47;
+     border-radius: 50%;
+}
+.btns:hover{
+     background-color: #5dcf47;
+}
+.btns:hover svg{
+display: block;
 }
