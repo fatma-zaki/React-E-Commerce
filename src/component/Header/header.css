@@ -1,8 +1,13 @@
+nav{
+     color: #000 !important;
+
+}
 nav.navbar.bg-body-tertiary{
      text-transform: capitalize;
-     /* background-color: transparent !important; */
+     background-color: transparent !important;
      height: 100px;
      z-index: 333;
+     /* color: #000 !important; */
 }
 nav .collapse.show{
      background-color: #f8f9fa!important;
@@ -12,16 +17,21 @@ nav .container{
      display: flex !important;
      justify-content: space-around !important;
      align-items: baseline !important;
+     color: #000 !important;
+     
 }
 a.navbar-brand{
      font-weight: bold;
      font-size: 25px;
      letter-spacing: 2px;
+     color: #000 !important;
+
      /* margin-right: 70px !important; */
 }
 nav .container a.nav-link{
      margin-right: 30px !important;
      font-size: 18px;
+     color: #000 !important;
      
 }
 nav form{
