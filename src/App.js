@@ -1,4 +1,4 @@
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Outlet, RouterProvider, createHashRouter } from "react-router-dom";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./Pages/Home/Home";
@@ -17,7 +17,7 @@ import { ToastContainer } from "react-toastify";
 function App() {
   const isOpen = useSelector((state) => state.cart.toggle);
 
-  //the main layout of the app
+  //the main layout of the app //
   const Layout = () => {
     return (
       <div className="main">
@@ -34,7 +34,7 @@ function App() {
   };
 
   //routing
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <Layout />,
