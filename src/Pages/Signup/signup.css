@@ -1,0 +1,11 @@
+
+input{
+     display: block;
+     width: 90%;
+     margin: auto;
+     padding: 15px;
+     font-size: 15px !important;
+     text-transform: capitalize;
+     border-radius: 5px;
+     border: 0.5px solid #e2e0e0;
+}

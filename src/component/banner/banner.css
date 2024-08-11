@@ -1,17 +1,23 @@
 .banner{
-     height: 450px;
+     min-height: 440px;
      width: 100%;
      margin-top: 100px;
      margin-bottom: 100px;
      background-color: #F3F3F3;
 }
+
 .banner .bannerImg{
-     width: 480px;
+     width: 490px;
+}
+.row{
+     /* gap: 10px; */
 }
 .banner .bannerInfo{
      display: flex;
      flex-direction: column;
      justify-content: center;
+     margin-bottom: 50px;
+     margin-top: 50px;
 }
 .banner .bannerInfo > span{
      width: 80px;

@@ -8,10 +8,10 @@ const Banner = () => {
     <div className="banner">
       <Container>
         <Row>
-          <Col>
+          <Col lg={6} md={9} sm={12}>
             <img className="bannerImg" src={img} alt="" />
           </Col>
-          <Col className="bannerInfo">
+          <Col className="bannerInfo" lg={6} md={3} sm={12}>
             <span>save 50%</span>
             <p className="">deal of the day</p>
             <h2>fashoin women's hat</h2>

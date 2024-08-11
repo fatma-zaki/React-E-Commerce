@@ -1,3 +1,82 @@
 .login{
-     background-color: #f4f4f4;
+     /* background-color: #f4f4f4; */
+     overflow: hidden;
 }
+
+.login form{
+     display: flex;
+     flex-direction: column;
+     margin-top: 100px;
+     margin-bottom: 100px;
+     gap: 10px;
+     align-items: start;
+     padding: 30px;
+}
+.login label{
+     text-transform: capitalize;
+}
+.login input{
+     /* display: block; */
+     width:90%;
+     /* margin: auto; */
+     padding: 15px;
+     font-size: 15px !important;
+     text-transform: capitalize;
+     border-radius: 5px;
+     border: 0.5px solid #e2e0e0;
+
+}
+.login button{
+     width: 90%;
+     /* margin: auto; */
+     padding: 15px;
+     font-size: 15px !important;
+     text-transform: capitalize;
+     border-radius: 5px !important;
+     outline: none;
+     border: 0.5px solid #000;
+     background-color: #000;
+     color: #fff;
+     text-transform: capitalize !important;
+     font-size: 20px !important;
+     transition: all 0.3s;
+}
+
+
+.login button:hover{
+     background-color: #fff;
+     color: #000;
+}
+
+.login .errmsg{
+     color: red;
+     padding: 5px;
+     margin: 5px;
+     font-size: 15px;
+}
+/* instructions */
+.login .instructions{
+     background-color: black;
+     color: #fff;
+     padding: 10px;
+     font-size: 12px;
+     width: 300px;
+}
+
+
+.login p.instructions svg{
+     font-size: 20px;
+     margin-right: 5px;
+}
+/* offScreen */
+.login .offscreen {
+     border: 0;
+     clip: rect(0 0 0 0);
+     height: 1px;
+     margin: -1px;
+     overflow: hidden;
+     padding: 0;
+     position: absolute;
+     width: 1px;
+   }
+   
