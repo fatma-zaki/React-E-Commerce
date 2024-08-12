@@ -67,7 +67,13 @@ button.add svg{
 }
 button.add:hover{
      background-color: black;
+     border: none;
 }
 button.add:hover svg{
      color: white;
+}
+button.add:active{
+     color: #fff !important;
+     background-color: #000 !important;
+     border: none;
 }

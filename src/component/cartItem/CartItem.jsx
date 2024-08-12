@@ -8,7 +8,7 @@ const CartItem = ({product}) => {
   
   const dispatch = useDispatch();
   return (
-    <Stack direction='horizontal' gap={2} className='d-flex justify-content-between mb-3'>
+    <Stack direction='horizontal'  className='d-flex justify-content-between mb-3'>
     <div className="left">
 
     <div className="img">
@@ -20,9 +20,6 @@ const CartItem = ({product}) => {
               <div className="details">
                 <h5 className="title">{product.title.substr(0, 12)}</h5>
                 <p className="priceCart">$ {product.price} usd</p>
-                {/* <button onClick={() => dispatch(increaseQuanCart(product))}> */}
-                  {/* increase */}
-                {/* </button> */}
                 <button className='removeFromCart' onClick={() => dispatch(deleteOneFromCart(product))}>
                   remove
                 </button>

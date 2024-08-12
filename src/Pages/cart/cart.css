@@ -6,13 +6,23 @@
 .productInfo{
      display: flex !important;
 }
+
 .offcanvas-body{
      z-index: 777777777 !important;
 }
+.offcanvas-body .items-area{
+     height: 80%;
+     overflow-y: scroll;
+}
+.items-area .row{
+     width: 99%;
+}
 .cartFoot{
      width: 100%;
+     padding-bottom:20px ;
      position: absolute;
-     bottom: 20px;
+     bottom: 0;
+     background-color: #fff;
 }
 .cartFoot .subtotal{
      margin-right: 20px;
@@ -29,8 +39,11 @@ button.checkout{
      font-size: 18px;
      text-transform: capitalize;
      background-color: white;
+     border-radius: 5px;
+     padding: 4px ;
      color: black;
-     border: 1px solid black;
+     border: 1.5px solid black;
+     transition: 0.4s;
 }
 
 button.checkout:hover{

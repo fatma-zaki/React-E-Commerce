@@ -36,16 +36,17 @@ const Cart = () => {
         cart.length === 0 ?
       <p className="noItems">No items found</p> :
       <Offcanvas.Body>
+        <div className="items-area">
+          
         {cart.map((product) => (
           <Row key={product.id}>
             <CartItem product={product}/>
           </Row>
         ))}
+        </div>
         <div className="cartFoot">
         <hr />
         
-          
-          
         <div className="subtotal">
           <h5>
             subtotal:

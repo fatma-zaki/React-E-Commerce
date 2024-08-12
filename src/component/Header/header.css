@@ -34,6 +34,19 @@ nav .container a.nav-link{
      color: #000 !important;
      
 }
+.dropdown .dropdown-menu{
+     overflow: hidden;
+}
+.dropdown .dropdown-menu .dropdown-item:active{
+     color: #fff !important;
+     background-color: #000;
+}
+.dropdown .dropdown-menu a.dropdown-item{
+color: #000 !important;
+line-height: 1;
+width: 90% ;
+
+}
 nav form{
      width: 250px;
      height: 40px;
